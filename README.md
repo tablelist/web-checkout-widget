@@ -29,4 +29,4 @@ Replace "storyville" with whatever venue name you are setting up.
 ### TODOS
 1. Ability to auto resize the iFrame - to do this we need to be able to communicate between the tablelist web code and the iframe to tell it to resize whenever something in the webpage resizes (ex. a drop down is opened up, increasing the inner pages height)
   * https://github.com/davidjbradshaw/iframe-resizer
-2. 
+
