@@ -1,13 +1,15 @@
 {
-  "name": "angular-jquery-lazyload",
+  "name": "Tablelist-Web-Checkout",
   "version": "0.0.1",
-  "description": "https://github.com/officert/angular-jquery-lazyload",
-  "url": "https://github.com/officert/angular-jquery-lazyload",
+  "description": "https://github.com/tablelist/web-checkout-widget",
+  "url": "https://github.com/tablelist/web-checkout-widget",
   "author": "Tim Officer",
   "engines": {
     "node": "0.12.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.12.3"
+  },
   "devDependencies": {
     "gulp": "3.8.11",
     "gulp-concat": "2.5.2",
