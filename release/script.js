@@ -6,6 +6,8 @@
   wrapperEl.className = 'tablelist-iframe-widget';
 
   var containerEl = document.getElementById(elementId);
+  if (!containerEl) throw new Error('Tablelist widget element not found for id : ' + elementId);
+
   var iframeEl = document.createElement('IFRAME');
   iframeEl.setAttribute('scrolling', 'no');
   iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + venueName + '?client=' + venueName + '-widget&partner=venue');
@@ -38,11 +40,12 @@
         try {
           data = JSON.parse(event.data);
         } catch (err) {
-          console.log('error parsing event data');
           return;
         }
 
         if (!data || data.eventType !== 'setHeight') return;
+
+        // console.log('resizing to ' + data.height);
 
         iframeEl.style.height = (data.height + 'px');
       }
