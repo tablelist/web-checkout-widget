@@ -8,7 +8,8 @@ var _ = require('underscore');
  * ========================================================================= */
 var defaultSettings = {
   PORT: process.env.PORT || 2001,
-  BUILD_DIR: 'release'
+  BUILD_DIR: 'release',
+  VENUE_SLUG: 'storyville'
 };
 
 var production = _.extend(_.extend({}, defaultSettings), {

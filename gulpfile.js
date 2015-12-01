@@ -7,7 +7,7 @@ var ENV_PROD = (ENV == 'production');
 
 var appConfig = require('./config/appConfig')[ENV];
 
-var fs = require('fs')
+var fs = require('fs');
 var gulp = require('gulp');
 var gulpIf = require('gulp-if');
 var inject = require('gulp-inject');
@@ -117,7 +117,7 @@ function _init(stream) {
 function _replace(stream) {
   _init(stream);
 
-  for (key in appConfig) {
+  for (var key in appConfig) {
     stream.pipe(replace('@@' + key, appConfig[key], {
       skipBinary: true
     }));

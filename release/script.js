@@ -1,6 +1,6 @@
 (function(window, document, elementId, venueName) {
   createStylesheet();
-  addResizeListener();
+  addEventListener();
 
   var wrapperEl = document.createElement('DIV');
   wrapperEl.className = 'tablelist-iframe-widget';
@@ -10,7 +10,7 @@
 
   var iframeEl = document.createElement('IFRAME');
   iframeEl.setAttribute('scrolling', 'no');
-  iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + venueName + '?client=' + venueName + '-widget&partner=venue');
+  iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + venueName + '?client=' + venueName + '-widget&partner=eventWidget');
   iframeEl.className = 'tablelist-iframe';
 
   wrapperEl.appendChild(iframeEl);
@@ -31,7 +31,7 @@
     return document.getElementsByTagName('head')[0].appendChild(styleEl);
   }
 
-  function addResizeListener() {
+  function addEventListener() {
     window.addEventListener('message', function receiveMessage(event) {
       //if (event.origin !== 'https://www-dev.tablelist.com' && event.origin !== 'https://www-dev.tablelist.com') return;
 
@@ -43,11 +43,12 @@
           return;
         }
 
-        if (!data || data.eventType !== 'setHeight') return;
-
-        // console.log('resizing to ' + data.height);
-
-        iframeEl.style.height = (data.height + 'px');
+        if (!data) return;
+        if (data.eventType === 'setHeight') {
+          iframeEl.style.height = (data.height + 'px');
+        } else if (data.eventType === 'checkoutRedirect') {
+          window.location.href = data.url;
+        }
       }
     }, false);
   }
