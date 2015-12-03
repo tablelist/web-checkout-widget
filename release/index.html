@@ -41,11 +41,12 @@
     <h3 class="center">Tablelist Checkout</h3>
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <div id="checkout"></div>
+        <div id="tablelist-checkout-1"></div>
+        <div id="tablelist-checkout-2"></div>
       </div>
     </div>
   </div>
-  <script>!function(e,t,a,i){function r(){var e="";e+=".tablelist-iframe-widget { position: relative; }",e+=".tablelist-iframe { border:none; position: relative; top:0; left: 0; width: 100%; height: 100%; overflow:hidden; background:transparent; }";var a=t.createElement("style");return a.type="text/css",a.media="screen",a.styleSheet?a.styleSheet.cssText=e:a.appendChild(t.createTextNode(e)),t.getElementsByTagName("head")[0].appendChild(a)}function n(){e.addEventListener("message",function(t){if(t&&t.data){var a=t.data;try{a=JSON.parse(t.data)}catch(i){return}if(!a)return;"setHeight"===a.eventType?s.style.height=a.height+"px":"checkoutRedirect"===a.eventType&&(e.location.href=a.url)}},!1)}r(),n();var l=t.createElement("DIV");l.className="tablelist-iframe-widget";var d=t.getElementById(a);if(!d)throw new Error("Tablelist widget element not found for id : "+a);var s=t.createElement("IFRAME");s.setAttribute("scrolling","no"),s.setAttribute("src","https://www-dev.tablelist.com/book/"+i+"?client="+i+"-widget&partner=eventWidget"),s.className="tablelist-iframe",l.appendChild(s),d.appendChild(l)}(window,document,"checkout","storyville");</script>
+  <script>!function(e,t,i){function r(){var e="";e+=".tablelist-iframe-widget {position:relative;}",e+=".tablelist-iframe {border:none;position:relative;top:0;left:0;width:100%;height:100%;overflow:hidden;background:transparent;}";var i=t.createElement("style");return i.type="text/css",i.media="screen",i.styleSheet?i.styleSheet.cssText=e:i.appendChild(t.createTextNode(e)),t.getElementsByTagName("head")[0].appendChild(i)}function n(e){var i=t.createElement("DIV");i.className="tablelist-iframe-widget";var r=t.getElementById(e.id);if(!r)throw new Error("Tablelist widget element not found for id : "+e.id);var n=t.createElement("IFRAME");return n.setAttribute("scrolling","no"),n.setAttribute("src","https://www-dev.tablelist.com/book/"+e.venue+"?client="+e.venue+"-widget&partner="+(e.partner||"venueWidget")+"&widget_id="+e.id),n.className="tablelist-iframe",i.appendChild(n),r.appendChild(i),n}function a(t){e.addEventListener("message",function(i){if(i&&i.data){var r=i.data;try{r=JSON.parse(i.data)}catch(n){return}if(!r)return;if("setHeight"===r.eventType)for(var a=0;a<t.length;a++){var d=t[a];if(d){var l=d.getAttribute("id");l===r.widgetId&&(d.style.height=r.height+"px")}}else"checkoutRedirect"===r.eventType&&(e.location.href=r.url)}},!1)}r();for(var d=[],l=0;l<i.length;l++){var o=n(i[l]);d.push(o)}a(d)}(window,document,[{id:"tablelist-checkout-1",venue:"storyville",partner:"eventWidget"},{id:"tablelist-checkout-2",venue:"bijou",partner:"eventWidget"}]);</script>
 </body>
 
 </html>
