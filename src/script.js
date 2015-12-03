@@ -33,6 +33,7 @@
 
     var iframeEl = document.createElement('IFRAME');
     iframeEl.setAttribute('scrolling', 'no');
+    iframeEl.setAttribute('widget-id', config.id);
     iframeEl.setAttribute('src', '@@DOMAIN/book/' + config.venue + '?client=' + config.venue + '-widget&partner=' + (config.partner || 'venueWidget') + '&widget_id=' + config.id);
     iframeEl.className = 'tablelist-iframe';
 
@@ -57,7 +58,7 @@
           for (var j = 0; j < iframes.length; j++) {
             var frameEl = iframes[j];
             if (!frameEl) continue;
-            var widgetId = frameEl.getAttribute('id');
+            var widgetId = frameEl.getAttribute('widget-id');
             if (widgetId === data.widgetId) {
               frameEl.style.height = (data.height + 'px');
             }
