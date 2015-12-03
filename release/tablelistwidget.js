@@ -34,7 +34,7 @@
     var iframeEl = document.createElement('IFRAME');
     iframeEl.setAttribute('scrolling', 'no');
     iframeEl.setAttribute('widget-id', config.id);
-    iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + config.venue + '?client=' + config.venue + '-widget&partner=' + (config.partner || 'venueWidget') + '&widget_id=' + config.id);
+    iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + config.venue + '?client=' + config.venue + '-widget&partner=' + (config.partner || 'venueWidget') + '&theme=' + (config.theme || 'tablelist') + '&widget_id=' + config.id);
     iframeEl.className = 'tablelist-iframe';
 
     wrapperEl.appendChild(iframeEl);
@@ -76,5 +76,6 @@
 }, {
   id: 'tablelist-checkout-2',
   venue: 'bijou',
-  partner: 'eventWidget'
+  partner: 'eventWidget',
+  theme: 'yelp'
 }]);
