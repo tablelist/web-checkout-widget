@@ -9,44 +9,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <style type="text/css">
-  body {
-    /*background: url('http://storyvilleboston.com/wp-content/uploads/2014/12/Slide_OurHistory.jpg');
-    background-position: center;
-    background-size: cover;*/
-    background: gray;
-  }
+    body {
+      background: gray;
+    }
 
-  .content {
-    padding-top: 40px;
-    padding-bottom: 140px;
-  }
+    .content {
+      padding-top: 40px;
+      padding-bottom: 140px;
+    }
 
-  .center {
-    text-align: center;
-  }
+    .content-section {
+      margin-bottom: 50px;
+    }
 
-  h3 {
-    padding-bottom: 60px;
-    color: white;
-  }
+    .content-section h3 {
+      margin-bottom: 20px;
+    }
 
-  /*.tablelist-iframe-widget {
-    min-height: 800px;
-  }*/
+    .widget-instance {
+      margin-bottom: 20px;
+    }
+
+    .widget-config-info {}
   </style>
 </head>
 
 <body>
   <div class="content container">
-    <h3 class="center">Tablelist Checkout</h3>
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
+    <div class="content-section widgets">
+      <h3>Widgets</h3>
+      <div class="widget-instance">
+        <div class="widget-config-info">
+          <div class="info-item">
+            <label>Desc.</label>
+            <p>
+              Defeault theme and venue partner. Hides header and footer. Loads checkout in iframe. 1 column layout.
+            </p>
+          </div>
+          <div class="info-item">
+            <label>Config</label>
+            <pre>{ id: 'tablelist-checkout-1', venue: 'storyville', partner: 'tablelist', theme: 'tablelist' }</pre>
+          </div>
+        </div>
         <div id="tablelist-checkout-1"></div>
+      </div>
+      <div class="widget-instance">
+        <div class="widget-config-info">
+          <div class="info-item">
+            <label>Desc.</label>
+            <p>
+              Venue widget theme and partner. Hides header and footer. Changes the parent window when checking out. 2 column layout.
+            </p>
+          </div>
+          <div class="info-item">
+            <label>Config.</label>
+            <pre>{ id: 'tablelist-checkout-2', venue: 'storyville', partner: 'venueWidget', theme: 'tablelist-venue-widget' }</pre>
+          </div>
+        </div>
         <div id="tablelist-checkout-2"></div>
       </div>
+      <div class="widget-instance">
+        <div class="widget-config-info">
+          <div class="info-item">
+            <label>Desc.</label>
+            <p>
+              Event widget theme and partner. Hides header and footer. Changes the parent window when checking out. 2 column layout. Hides date picker, and locks to a specific date.
+            </p>
+          </div>
+          <div class="info-item">
+            <label>Config.</label>
+            <pre>{ id: 'tablelist-checkout-3', venue: 'storyville', partner: 'eventWidget', theme: 'tablelist-event-widget', date : '1451594229000' }</pre>
+          </div>
+        </div>
+        <div id="tablelist-checkout-3"></div>
+      </div>
+    </div>
+    <div class="widget-instance">
+      <div class="widget-config-info">
+        <div class="info-item">
+          <label>Desc.</label>
+          <p>
+            Yelp widget theme and partner. Hides header and footer. Changes the parent window when checking out. 2 column layout. Yelp styles.
+          </p>
+        </div>
+        <div class="info-item">
+          <label>Config.</label>
+          <pre>{ id: 'tablelist-checkout-4', venue: 'storyville', partner: 'venue', theme: 'yelp' }</pre>
+        </div>
+      </div>
+      <div id="tablelist-checkout-4"></div>
     </div>
   </div>
-  <script>!function(e,t,i){function r(){var e="";e+=".tablelist-iframe-widget {position:relative;}",e+=".tablelist-iframe {border:none;position:relative;top:0;left:0;width:100%;height:100%;overflow:hidden;background:transparent;}";var i=t.createElement("style");return i.type="text/css",i.media="screen",i.styleSheet?i.styleSheet.cssText=e:i.appendChild(t.createTextNode(e)),t.getElementsByTagName("head")[0].appendChild(i)}function a(e){var i=t.createElement("DIV");i.className="tablelist-iframe-widget";var r=t.getElementById(e.id);if(!r)throw new Error("Tablelist widget element not found for id : "+e.id);var a=t.createElement("IFRAME");return a.setAttribute("scrolling","no"),a.setAttribute("widget-id",e.id),a.setAttribute("src","https://www-dev.tablelist.com/book/"+e.venue+"?client="+e.venue+"-widget&partner="+(e.partner||"venueWidget")+"&theme="+(e.theme||"tablelist")+"&widget_id="+e.id),a.className="tablelist-iframe",i.appendChild(a),r.appendChild(i),a}function n(t){e.addEventListener("message",function(i){if(i&&i.data){var r=i.data;try{r=JSON.parse(i.data)}catch(a){return}if(!r)return;if("setHeight"===r.eventType)for(var n=0;n<t.length;n++){var d=t[n];if(d){var l=d.getAttribute("widget-id");l===r.widgetId&&(d.style.height=r.height+"px")}}else"checkoutRedirect"===r.eventType&&(e.location.href=r.url)}},!1)}r();for(var d=[],l=0;l<i.length;l++){var s=a(i[l]);d.push(s)}n(d)}(window,document,[{id:"tablelist-checkout-1",venue:"storyville",partner:"eventWidget"},{id:"tablelist-checkout-2",venue:"bijou",partner:"eventWidget",theme:"yelp"}]);</script>
+  <script>!function(e,t,i){function r(){var e="";e+=".tablelist-iframe-widget {position:relative;}",e+=".tablelist-iframe {border:none;position:relative;top:0;left:0;width:100%;height:100%;overflow:hidden;background:transparent;}";var i=t.createElement("style");return i.type="text/css",i.media="screen",i.styleSheet?i.styleSheet.cssText=e:i.appendChild(t.createTextNode(e)),t.getElementsByTagName("head")[0].appendChild(i)}function a(e){var i=t.createElement("DIV");i.className="tablelist-iframe-widget";var r=t.getElementById(e.id);if(!r)throw new Error("Tablelist widget element not found for id : "+e.id);var a=t.createElement("IFRAME");return a.setAttribute("scrolling","no"),a.setAttribute("widget-id",e.id),a.setAttribute("src","https://www-dev.tablelist.com/book/"+e.venue+"?client="+e.venue+"-widget&partner="+(e.partner||"venueWidget")+"&theme="+(e.theme||"tablelist")+"&widget_id="+e.id+(e.date?"&date="+e.date:"")),a.className="tablelist-iframe",i.appendChild(a),r.appendChild(i),a}function n(t){e.addEventListener("message",function(i){if(i&&i.data){var r=i.data;try{r=JSON.parse(i.data)}catch(a){return}if(!r)return;if("setHeight"===r.eventType)for(var n=0;n<t.length;n++){var l=t[n];if(l){var d=l.getAttribute("widget-id");d===r.widgetId&&(l.style.height=r.height+"px")}}else"checkoutRedirect"===r.eventType&&(e.location.href=r.url)}},!1)}r();for(var l=[],d=0;d<i.length;d++){var s=a(i[d]);l.push(s)}n(l)}(window,document,[{id:"tablelist-checkout-1",venue:"storyville",partner:"venue",theme:"tablelist"},{id:"tablelist-checkout-2",venue:"storyville",partner:"venueWidget",theme:"tablelist-venue-widget"},{id:"tablelist-checkout-3",venue:"storyville",partner:"eventWidget",theme:"tablelist-event-widget",date:"1451594229000"},{id:"tablelist-checkout-4",venue:"storyville",partner:"venue",theme:"yelp"}]);</script>
 </body>
 
 </html>

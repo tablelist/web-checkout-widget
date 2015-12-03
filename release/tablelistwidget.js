@@ -34,7 +34,7 @@
     var iframeEl = document.createElement('IFRAME');
     iframeEl.setAttribute('scrolling', 'no');
     iframeEl.setAttribute('widget-id', config.id);
-    iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + config.venue + '?client=' + config.venue + '-widget&partner=' + (config.partner || 'venueWidget') + '&theme=' + (config.theme || 'tablelist') + '&widget_id=' + config.id);
+    iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + config.venue + '?client=' + config.venue + '-widget&partner=' + (config.partner || 'venueWidget') + '&theme=' + (config.theme || 'tablelist') + '&widget_id=' + config.id + (config.date ? ('&date=' + config.date) : ''));
     iframeEl.className = 'tablelist-iframe';
 
     wrapperEl.appendChild(iframeEl);
@@ -72,10 +72,22 @@
 })(window, document, [{
   id: 'tablelist-checkout-1',
   venue: 'storyville',
-  partner: 'eventWidget'
+  partner: 'venue',
+  theme: 'tablelist'
 }, {
   id: 'tablelist-checkout-2',
-  venue: 'bijou',
+  venue: 'storyville',
+  partner: 'venueWidget',
+  theme: 'tablelist-venue-widget'
+}, {
+  id: 'tablelist-checkout-3',
+  venue: 'storyville',
   partner: 'eventWidget',
+  theme: 'tablelist-event-widget',
+  date: '1451594229000'
+}, {
+  id: 'tablelist-checkout-4',
+  venue: 'storyville',
+  partner: 'venue',
   theme: 'yelp'
 }]);

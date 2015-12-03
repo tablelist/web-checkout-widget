@@ -58,11 +58,11 @@ gulp.task('replace', ['copy', 'js'], function() {
 
 gulp.task('replace-html', ['replace'], function() {
   var file = fs.readFileSync(BUILDDIR + '/' + MINIFIEDSCRIPT, 'utf8');
-  file = '<script>' + file + '</script>';
 
-  appConfig.SCRIPT = file;
+  appConfig.SCRIPT = '<script>' + file + '</script>';
+  appConfig.RAW_SCRIPT = file;
 
-  return _replace(gulp.src(BUILDDIR + '/index.html'))
+  return _replace(gulp.src([BUILDDIR + '/index.html', BUILDDIR + '/widgetGenerator/index.html']))
     .pipe(gulp.dest(BUILDDIR));
 });
 
