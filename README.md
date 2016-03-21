@@ -16,9 +16,29 @@ See a [Live Example](tablelist.com/widgets/storyville).
 
 2.) Add the widget Javascript to your website. Place the Tablelist widget ``<script>`` right before the close of the web page's ``<body>`` tag.
 
-The widget code can be found at [/release/tablelistwidget.js](/release/tablelistwidget.js) or [/release/tablelistwidget.min.js](/release/tablelistwidget.min.js)
+The widget code can be found here:
 
-Note: Replace **storyville** with whatever venue name you are setting up. 
+* [/release/tablelistwidget.js](/release/tablelistwidget.js)
+* [/release/tablelistwidget.min.js](/release/tablelistwidget.min.js) (minified)
+
+## Customization
+
+In ``tablelistwidget.js``, youll have to edit the configuration object. Here is an example from the default configuration:
+
+[{
+  id: 'tablelist-checkout-1',
+  venue: 'storyville',
+  partner: 'venue',
+  theme: 'tablelist'
+}, ....]
+
+The configuration object support a number of customizable parameters:
+
+* **id** - Element ID on which widget will be placed. *this should match the ``div`` from Installation Step #1*
+* **venue** - Venue Slug for which 
+* **partner** - Partner name. If you don't have a partner name, please leave default of ``venueWidget``.
+* **theme** - Color scheme the widget should use. May be one of ``['widget-theme-tablelist', 'widget-theme-light', 'widget-theme-dark']`. [See examples](https://www.tablelist.com/widgets/storyville)
+* **date** - (optional) Unix String for what day the widget should default to. *If not provided, will default to the current date*
 
 ## Prerequisities
 
