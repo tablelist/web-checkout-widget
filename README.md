@@ -1,10 +1,10 @@
 # Tablelist Web Widget
 
-Embeddable checkout widget for creating reservations. Powered by Tablelist. Embed the Tablelist checkout flow on client's websites, allowing customers to purchase on Tablelist directly through the client website. 
+Embeddable checkout widget for creating reservations. Embed the Tablelist checkout flow on client's websites, allowing customers to purchase on Tablelist directly through the client website. 
+
+*Powered by Tablelist.*
 
 ## Example
-
-Script to easily add the Tablelist checkout flow to any webpage.
 
 See a [Live Example](tablelist.com/widgets/storyville).
 
@@ -33,17 +33,39 @@ Add the following script right before the closing body tag
 
 Replace "storyville" with whatever venue name you are setting up.
 
+## Prerequisities
+
+Development tools that you will need installed on your local computer:
+
+* [Node Package Manager (npm)](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
+* [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
 ## Getting Started
 
-Download dependencies:
+To start the setup of your local development environment, download dependencies:
 
-``sh $ npm install``
+```sh $ npm install```
+
+## Coding style tests
+
+``` sh
+# Run JSHint
+$ gulp jshint
+```
 
 ## Release
 
 Make Build
 
-``sh $ gulp release``
+```sh $ gulp release```
+
+## Deployment
+
+*fill me in*
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. Please remember to update ``package.json``
 
 ## TODO:
 
