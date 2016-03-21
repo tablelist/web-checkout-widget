@@ -6,41 +6,56 @@ Embed the Tablelist checkout widget on client's websites, allowing customers to 
 
 ## Example
 
-See a [Live Example](tablelist.com/widgets/storyville).
+See a [Live Example](http://tablelist.com/widgets/storyville).
 
 ## Installation
 
-1.) Add the following ``<div>`` to the location on your website where you wish the embedded Tablelist booking widget to appear. Our script will automatically replace this element with the venue's widget.
+1.) Add the following ``<div>`` to your website. The embedded Tablelist widget will get initialized at this location on the page.
 
-```html <div id="tablelist-checkout-1"></div>```
+```<div id="tablelist-checkout-1"></div>```
 
-2.) Add the widget Javascript to your website. Place the Tablelist widget ``<script>`` right before the close of the web page's ``<body>`` tag.
+2.) Add one of the following scripts to your website. Place ``<script>`` right before the close of your page's ``<body>`` tag.
 
-The widget code can be found here:
+* [tablelistwidget.js](/release/tablelistwidget.js)
+* [tablelistwidget.min.js](/release/tablelistwidget.min.js) (minified)
 
-* [/release/tablelistwidget.js](/release/tablelistwidget.js)
-* [/release/tablelistwidget.min.js](/release/tablelistwidget.min.js) (minified)
+## Configuration
 
-## Customization
+The configuration object support a number of customizable parameters.
 
-In ``tablelistwidget.js``, youll have to edit the configuration object. Here is an example from the default configuration:
+For example, here's the demp configuration from ``tablelistwidget.js``:
 
-[{
+```js [{
   id: 'tablelist-checkout-1',
   venue: 'storyville',
   partner: 'venue',
   theme: 'tablelist'
-}, ....]
+}, ....] 
+```
 
-The configuration object support a number of customizable parameters:
+## Customization Options
 
-* **id** - Element ID on which widget will be placed. *this should match the ``div`` from Installation Step #1*
-* **venue** - Venue Slug for which 
-* **partner** - Partner name. If you don't have a partner name, please leave default of ``venueWidget``.
-* **theme** - Color scheme the widget should use. May be one of ``['widget-theme-tablelist', 'widget-theme-light', 'widget-theme-dark']`. [See examples](https://www.tablelist.com/widgets/storyville)
-* **date** - (optional) Unix String for what day the widget should default to. *If not provided, will default to the current date*
+<br>**id** - Element ID on which widget will be placed.
 
-## Prerequisities
+*this must match the ``div`` from Installation Step #1*
+
+<br>**venue** - Venue name for which venue will be loaded.
+
+*This will be your tablelist "slug". If you don't know what value to use, please contact hello@tablelist.com and we'll provide it.*
+
+<br>**partner** - Partner name.
+ 
+*If you don't have a partner name, please leave default of "venueWidget".*
+
+<br>**theme** - Color scheme the widget should use.  [See examples](https://www.tablelist.com/widgets/storyville)
+
+*May be one of 'widget-theme-tablelist', 'widget-theme-light', or 'widget-theme-dark'*
+
+<br>**date** - (optional) Unix Epoch time for what day the widget should default to. 
+
+*If not provided, will default to the current date*
+
+## Development
 
 Development tools that you will need installed on your local computer:
 
@@ -51,7 +66,7 @@ Development tools that you will need installed on your local computer:
 
 To start the setup of your local development environment, download dependencies:
 
-```sh $ npm install```
+``$ npm install``
 
 ## Coding style tests
 
@@ -62,11 +77,13 @@ $ gulp jshint
 
 ## Release
 
-Make Build
+To create a new release of the Tablelist Widget, build the project. The updated script will be created in the ``/release/`` folder. Use the command:
 
-```sh $ gulp release```
+```$ gulp release```
 
 ## Deployment
+
+Note: Deployment is currently a manual effort. Partners will copy & paste the required code into their website's source code. We have future plans to provide a CDN for loading the most recent version of the Tablelist widget.
 
 *fill me in*
 
