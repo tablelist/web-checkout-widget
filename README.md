@@ -1,10 +1,17 @@
-# web-checkout-widget
+# Tablelist Web Widget
+
+Embeddable checkout widget for creating reservations. Powered by Tablelist. Embed the Tablelist checkout flow on client's websites, allowing customers to purchase on Tablelist directly through the client website. 
+
+## Example
 
 Script to easily add the Tablelist checkout flow to any webpage.
+
+See a [Live Example](tablelist.com/widgets/storyville).
 
 ## Installation
 
 Add the following script right before the closing body tag
+
 ```javascript
 <script>
   ! function(e, t, a, i) {
@@ -26,7 +33,20 @@ Add the following script right before the closing body tag
 
 Replace "storyville" with whatever venue name you are setting up.
 
-### TODOS
+## Getting Started
+
+Download dependencies:
+
+``sh $ npm install``
+
+## Release
+
+Make Build
+
+``sh $ gulp release``
+
+## TODO:
+
 1. Ability to auto resize the iFrame - to do this we need to be able to communicate between the tablelist web code and the iframe to tell it to resize whenever something in the webpage resizes (ex. a drop down is opened up, increasing the inner pages height)
   * https://github.com/davidjbradshaw/iframe-resizer
 
