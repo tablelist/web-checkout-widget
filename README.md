@@ -1,8 +1,8 @@
 # Tablelist Web Widget
 
-Embeddable checkout widget for creating reservations. Embed the Tablelist checkout flow on client's websites, allowing customers to purchase on Tablelist directly through the client website. 
+Embed the Tablelist checkout widget on client's websites, allowing customers to purchase through Tablelist without leaving the venue's website.
 
-*Powered by Tablelist.*
+*Powered by Tablelist*
 
 ## Example
 
@@ -10,28 +10,15 @@ See a [Live Example](tablelist.com/widgets/storyville).
 
 ## Installation
 
-Add the following script right before the closing body tag
+1.) Add the following ``<div>`` to the location on your website where you wish the embedded Tablelist booking widget to appear. Our script will automatically replace this element with the venue's widget.
 
-```javascript
-<script>
-  ! function(e, t, a, i) {
-    function l() {
-      var e = "";
-      e += ".tablelist-iframe-widget { position: relative; }", e += ".tablelist-iframe { border:none; position: absolute; top:0; left: 0; width: 100%; height: 100%; }";
-      var a = t.createElement("style");
-      return a.type = "text/css", a.media = "screen", a.styleSheet ? a.styleSheet.cssText = e : a.appendChild(t.createTextNode(e)), t.getElementsByTagName("head")[0].appendChild(a)
-    }
-    l();
-    var n = t.createElement("DIV");
-    n.className = "tablelist-iframe-widget";
-    var s = t.getElementById(a),
-      r = t.createElement("IFRAME");
-    r.setAttribute("src", "https://venue.tablelist.com/book/" + i + "?client=" + i + "-widget"), r.className = "tablelist-iframe", n.appendChild(r), s.appendChild(n)
-  }(window, document, "checkout", "storyville");
-  </script>
-```
+```html <div id="tablelist-checkout-1"></div>```
 
-Replace "storyville" with whatever venue name you are setting up.
+2.) Add the widget Javascript to your website. Place the Tablelist widget ``<script>`` right before the close of the web page's ``<body>`` tag.
+
+The widget code can be found at [/release/tablelistwidget.js](/release/tablelistwidget.js) or [/release/tablelistwidget.min.js](/release/tablelistwidget.min.js)
+
+Note: Replace **storyville** with whatever venue name you are setting up. 
 
 ## Prerequisities
 
