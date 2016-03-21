@@ -66,12 +66,3 @@ Make Build
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. Please remember to update ``package.json``
-
-## TODO:
-
-1. Ability to auto resize the iFrame - to do this we need to be able to communicate between the tablelist web code and the iframe to tell it to resize whenever something in the webpage resizes (ex. a drop down is opened up, increasing the inner pages height)
-  * https://github.com/davidjbradshaw/iframe-resizer
-
-=======
-``gulp release``
->>>>>>> 2ccbf4362d5a23bfa791bae52892ab7451e8dfd7
