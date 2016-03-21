@@ -25,13 +25,15 @@ The configuration object support a number of customizable parameters.
 
 For example, here's the demp configuration from ``tablelistwidget.js``:
 
-```js [{
+``js 
+[{
   id: 'tablelist-checkout-1',
   venue: 'storyville',
   partner: 'venue',
   theme: 'tablelist'
 }, ....] 
-```
+
+``
 
 ## Customization Options
 
