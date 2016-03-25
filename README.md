@@ -10,13 +10,14 @@ See a [Live Example](http://tablelist.com/widgets/storyville).
 
 ## Installation
 
-1.) Add the following ``<div>`` to your website. The embedded Tablelist widget will get initialized at this location on the page.
+See our [Installation Instructions](https://www.tablelist.com/widgets).
+
+Add the following ``<div>`` to your website. This is where the Tablelist Widget will initialize.
 
 ```<div id="tablelist-checkout-1"></div>```
 
-2.) Add one of the following scripts to your website. Place ``<script>`` right before the close of your page's ``<body>`` tag.
+Add the following script to your website. Copy and paste the code into a ``<script>`` tag that lives right before your page's ``</body>`` tag.
 
-* [tablelistwidget.js](/release/tablelistwidget.js)
 * [tablelistwidget.min.js](/release/tablelistwidget.min.js) (minified)
 
 ## Configuration
@@ -25,17 +26,22 @@ The configuration object support a number of customizable parameters.
 
 For example, here's the demp configuration from ``tablelistwidget.js``:
 
-``js 
+```js 
 [{
   id: 'tablelist-checkout-1',
   venue: 'storyville',
   partner: 'venue',
-  theme: 'tablelist'
+  theme: 'tablelist',
+  date: ....
 }, ....] 
 
-``
+```
 
 ## Customization Options
+
+We recommend Use our [Widget Creation Tool](https://www.tablelist.com/widgets).
+
+For advanced configuration, the supported parameters are as seen below:
 
 <br>**id** - Element ID on which widget will be placed.
 
@@ -43,7 +49,7 @@ For example, here's the demp configuration from ``tablelistwidget.js``:
 
 <br>**venue** - Venue name for which venue will be loaded.
 
-*This will be your tablelist "slug". If you don't know what value to use, please contact hello@tablelist.com and we'll provide it.*
+*This will be your tablelist "slug". 
 
 <br>**partner** - Partner name.
  
@@ -87,7 +93,7 @@ To create a new release of the Tablelist Widget, build the project. The updated 
 
 Note: Deployment is currently a manual effort. Partners will copy & paste the required code into their website's source code. We have future plans to provide a CDN for loading the most recent version of the Tablelist widget.
 
-*fill me in*
+*The widget is currently manually deployed. Users must copy and paste the code snippets into their website's source code.*
 
 ## Versioning
 
