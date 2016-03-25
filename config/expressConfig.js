@@ -9,7 +9,6 @@ var ssl = require('../middleware/ssl');
 var deeplink = require('../middleware/deeplink');
 var headers = require('../middleware/headers');
 var cacheControl = require('../middleware/cacheControl');
-var isFile = require('../middleware/isFile');
 var error = require('../middleware/error');
 
 /* =========================================================================

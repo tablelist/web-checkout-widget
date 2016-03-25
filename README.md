@@ -83,11 +83,23 @@ To start the setup of your local development environment, download dependencies:
 $ gulp jshint
 ```
 
+## Local Server
+
+``sh
+# Start local server
+$ node server.js
+``
+
+*Widget demo should now be running locally at ``localhost:2001``*
+
 ## Release
 
 To create a new release of the Tablelist Widget, build the project. The updated script will be created in the ``/release/`` folder. Use the command:
 
-```$ gulp release```
+``sh
+# Build Release
+$ gulp release
+``
 
 ## Deployment
 
