@@ -37,8 +37,10 @@
     iframeEl.setAttribute('src', 'https://www-dev.tablelist.com/book/' + config.venue + '?client=' + config.venue + '-widget&partner=' + (config.partner || 'venueWidget') + '&theme=' + (config.theme || 'tablelist') + '&widget_id=' + config.id + (config.date ? ('&date=' + config.date) : ''));
     iframeEl.className = 'tablelist-iframe';
 
+    var poweredBy = '<p class="widget-powered-by">Powered by <a href="https://www.tablelist.com" target="_blank">Tablelist</a></p>';
+
     wrapperEl.appendChild(iframeEl);
-    containerEl.appendChild(wrapperEl);
+    containerEl.appendChild(wrapperEl).innerHTML += poweredBy;
 
     return iframeEl;
   }
